@@ -95,3 +95,12 @@ img {
 .night-mode a {
   color: #9eff9e;
 }
+
+.night-mode #toggle-mode {
+  background-color: #444;
+  color: #9eff9e;
+}
+
+.night-mode #toggle-mode:hover {
+  background-color: #666;
+}
