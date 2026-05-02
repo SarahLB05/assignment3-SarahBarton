@@ -68,11 +68,13 @@ img {
   color: white;
 }
 
-.night-mode a {
-  color: lightgreen;
+
+.night-mode header,
+.night-mode footer {
+  background-color: #1f1f1f;
+  color: white;
 }
 
-.night-mode button {
-  background-color: #333;
-  color: white;
+.night-mode a {
+  color: #9eff9e;
 }
