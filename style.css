@@ -1,8 +1,8 @@
 /* 1. DEFINE YOUR COLORS */
 :root {
   /* Light Mode Colors (Default) */
-  --bg-body: #bdf0bf;
-  --text-main: #23422b;
+  --bg-body: #f1fff2;
+  --text-main: #255b33;
   --header-bg: #23422b;
   --header-text: #ffffff;
   --button-bg: #0d421b;
@@ -13,8 +13,8 @@
 
 /* 2. DEFINE NIGHT MODE OVERRIDES */
 body.night-mode {
-  --bg-body: #1a2e1f;       /* Dark forest green */
-  --text-main: #e0f0e3;     /* Soft light green text */
+  --bg-body: #255b33;       /* Dark forest green */
+  --text-main: #f1fff2;     /* Soft light green text */
   --header-bg: #0d1a10;     /* Deeper dark for header */
   --button-bg: #444444;     /* Neutral dark button */
   --button-text: #9eff9e;   /* Glowing green button text */
