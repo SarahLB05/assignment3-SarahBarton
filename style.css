@@ -3,7 +3,7 @@
   /* Light Mode Colors (Default) */
   --bg-body: #f1fff2;
   --text-main: #255b33;
-  --header-bg: #23422b;
+  --header-bg: #2d613a;
   --header-text: #ffffff;
   --button-bg: #0d421b;
   --button-text: #ffffff;
@@ -15,8 +15,8 @@
 body.night-mode {
   --bg-body: #255b33;       /* Dark forest green */
   --text-main: #f1fff2;     /* Soft light green text */
-  --header-bg: #0d1a10;     /* Deeper dark for header */
-  --button-bg: #444444;     /* Neutral dark button */
+  --header-bg: #065318;     /* Deeper dark for header */
+  --button-bg: #065318;     /* Neutral dark button */
   --button-text: #9eff9e;   /* Glowing green button text */
   --button-hover: #555555;
   --link-color: #9eff9e;    /* Easier to read on dark */
@@ -171,7 +171,7 @@ img {
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: hsl(149, 100%, 95%);
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
@@ -184,10 +184,10 @@ img {
 /* Fading animation */
 .fade {
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 1.7s;
 }
 
 @keyframes fade {
-  from {opacity: .4}
+  from {opacity: .6}
   to {opacity: 1}
 }
