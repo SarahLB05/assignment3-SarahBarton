@@ -1,86 +1,105 @@
+/* 1. DEFINE YOUR COLORS */
+:root {
+  /* Light Mode Colors (Default) */
+  --bg-body: #bdf0bf;
+  --text-main: #23422b;
+  --header-bg: #23422b;
+  --header-text: #ffffff;
+  --button-bg: #0d421b;
+  --button-text: #ffffff;
+  --button-hover: #145a26;
+  --link-color: #ffffff;
+}
 
+/* 2. DEFINE NIGHT MODE OVERRIDES */
+body.night-mode {
+  --bg-body: #1a2e1f;       /* Dark forest green */
+  --text-main: #e0f0e3;     /* Soft light green text */
+  --header-bg: #0d1a10;     /* Deeper dark for header */
+  --button-bg: #444444;     /* Neutral dark button */
+  --button-text: #9eff9e;   /* Glowing green button text */
+  --button-hover: #555555;
+  --link-color: #9eff9e;    /* Easier to read on dark */
+}
+
+/* 3. APPLY STYLES TO ELEMENTS */
 body {
-  background-color: #bdf0bf;
-  color: #23422b;
+  background-color: var(--bg-body);
+  color: var(--text-main);
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
   line-height: 1.5;
   margin: 0;
-  list-style-type: none;
-  font-size: 1rem;
   padding: 20px;
+  font-size: 1rem;
+  /* Adds the smooth fade effect */
+  transition: background-color 0.4s ease, color 0.4s ease; 
+}
+
+header, footer {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  text-align: center;
+  padding: 20px;
+  transition: background-color 0.4s ease;
 }
 
 header {
-    background-color: #23422b;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    position: sticky;
-    top: 0;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-}
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 10px 0;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  z-index: 1000;
 }
 
-nav li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #bdf0bf;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
-    text-align: center;
-}
-
-footer {
-    background-color: #23422b;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 40px;
-}
-
-img {
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-}
-
+/* Toggle Button Styling */
 #toggle-mode {
-  background-color: #0d421b;
-  color: white;
+  background-color: var(--button-bg);
+  color: var(--button-text);
   border: none;
   padding: 10px 16px;
   border-radius: 8px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: inherit;
   cursor: pointer;
   margin-top: 10px;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 #toggle-mode:hover {
-  background-color: #145a26;
+  background-color: var(--button-hover);
   transform: scale(1.05);
 }
 
-.night-mode #toggle-mode {
-  background-color: #444;
-  color: #9eff9e;
+/* Navigation Links */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+nav li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--link-color);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  min-height: 200px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
