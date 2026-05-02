@@ -1,8 +1,17 @@
+window.addEventListener('DOMContentLoaded', () => {
+    const isModeActive = localStorage.getItem('night-mode') === 'true';
+    if (isModeActive) {
+        document.body.classList.add('night-mode');
+    }
+});
+
 const toggleBtn = document.getElementById("toggle-mode");
 const body = document.body;
 
 toggleBtn.addEventListener("click", () => {
-  body.classList.toggle("night-mode");
+  const isActive = document.body.classList.toggle("night-mode");
+
+  localStorage.setItem('night-mode', isActive)
 
   toggleBtn.textContent = body.classList.contains("night-mode")
     ? "Switch to Day Mode"
