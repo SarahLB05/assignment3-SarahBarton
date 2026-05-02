@@ -63,16 +63,16 @@ img {
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
-.dark-mode {
+.night-mode {
   background-color: #121212;
   color: white;
 }
 
-.dark-mode a {
+.night-mode a {
   color: lightgreen;
 }
 
-.dark-mode button {
+.night-mode button {
   background-color: #333;
   color: white;
 }
